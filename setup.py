@@ -6,7 +6,7 @@ import os
 
 #python setup.py sdist upload
 
-version = 'v0.1.5'
+version = 'v0.1.6'
 
 name = 'abnum'
 
@@ -27,7 +27,7 @@ setup(
   install_requires = ["remarkuple", "romanize3", "IPython", "pandas"],
   version = version,
   description = 'Abnum - Alphabetic numerals package including various letter value substituting systems from ancient times to modern artificial ones',
-  long_description = read('README.md'),
+  long_description = read('README'),
   author = 'Marko Manninen',
   author_email = 'elonmedia@gmail.com',
 
