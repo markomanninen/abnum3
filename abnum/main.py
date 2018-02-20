@@ -3,7 +3,7 @@
 # file: main.py
 
 import re
-import romanize
+import romanize3
 import pandas as pd
 from . import letter_value
 from IPython.display import HTML
@@ -24,7 +24,7 @@ class Abnum(object):
     """
     def __init__(self, code, data = None):
         self.values = {}
-        self.r = romanize.__dict__[code]
+        self.r = romanize3.__dict__[code]
         if data:
             self.data = data
         else:
