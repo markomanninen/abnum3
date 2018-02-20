@@ -6,23 +6,27 @@ import os
 
 #python setup.py sdist upload
 
-version = 'v0.1.1'
+version = 'v0.1.3'
 
 name = 'abnum'
 
 def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname), encoding="utf8").read()
+    try:
+        return open(os.path.join(os.path.dirname(__file__), fname), encoding="utf8").read()
+    except:
+        print("Could not read/open file: %s" % os.path.join(os.path.dirname(__file__), fname))
+        return ''
 
 setup(
   name = name,
   packages = [name],
   package_dir = {name: name},
   package_data = {
-    name: ['*.py']
+    name: ['*.py', '*.md']
   },
   install_requires = [],
   version = version,
-  description = 'Abnum 3 - Alphabetic numerals package including various letter value substituting systems from ancient times to modern artificial ones',
+  description = 'Abnum - Alphabetic numerals package including various letter value substituting systems from ancient times to modern artificial ones',
   long_description = read('README.md'),
   author = 'Marko Manninen',
   author_email = 'elonmedia@gmail.com',
