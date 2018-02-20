@@ -8,7 +8,7 @@ import os
 
 version = 'v0.1.1'
 
-name = 'abnum3'
+name = 'abnum'
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname), encoding="utf8").read()
