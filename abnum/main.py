@@ -3,13 +3,13 @@
 # file: main.py
 
 import re
-from .search import find_cumulative_indices
-from . import romanize
+import romanize
 import pandas as pd
 from . import letter_value
 from IPython.display import HTML
-from .remarkuple import helper as h, table
+from remarkuple import helper as h, table
 from .math import digital_root, digital_sum
+from .search import find_cumulative_indices
 
 error_msg = "String '%s' contains unsupported characters for letter value calculation"
 
@@ -26,7 +26,7 @@ class Abnum(object):
         self.values = {}
         self.r = romanize.__dict__[code]
         if data:
-            self.data = data 
+            self.data = data
         else:
             self.data = letter_value.data[code]
         self.init_values(self.data)
@@ -55,7 +55,7 @@ class Abnum(object):
 
     def value(self, string):
         """
-        String is a greek letter, word or sentence OR roman letter representation (transliteration) 
+        String is a greek letter, word or sentence OR roman letter representation (transliteration)
         of the greek letter, word or sentence that will be converted to the numerical value letter by letter
         Main function will convert input to unicode format for easier frontend, but on module logic
         more straightforward function unicode_letter_value is used.
@@ -121,7 +121,7 @@ class Abnum(object):
         # phrase summary from word summary
         s = data2.sum()
         data3 = pd.DataFrame({'digital_root': [digital_root(s.value)],
-                              'characters': [s.characters], 
+                              'characters': [s.characters],
                               'digital_sum': [digital_sum(s.value)],
                               'value': [s.value],
                               'phrase': text})
@@ -166,7 +166,7 @@ class Abnum(object):
         tbl.addFootRow(tr4)
         # add summary footer for table
         num = self.unicode_value(text)
-        tbl.addFootRow(h.tr(h.td("%s %s" % (num, h.sub(digital_sum(num), " / ", digital_root(num, modulo))), 
-                                 colspan=len(text)+len(text.split()), 
+        tbl.addFootRow(h.tr(h.td("%s %s" % (num, h.sub(digital_sum(num), " / ", digital_root(num, modulo))),
+                                 colspan=len(text)+len(text.split()),
                                  style="border-top: solid 1px #ddd")))
         return tbl

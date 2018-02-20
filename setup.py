@@ -6,7 +6,7 @@ import os
 
 #python setup.py sdist upload
 
-version = 'v0.1.3'
+version = 'v0.1.4'
 
 name = 'abnum'
 
@@ -22,9 +22,9 @@ setup(
   packages = [name],
   package_dir = {name: name},
   package_data = {
-    name: ['*.py', '*.md']
+    name: ['*.py']
   },
-  install_requires = [],
+  install_requires = ["remarkuple", "romanize", "IPython", "pandas"],
   version = version,
   description = 'Abnum - Alphabetic numerals package including various letter value substituting systems from ancient times to modern artificial ones',
   long_description = read('README.md'),
@@ -41,7 +41,7 @@ setup(
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
-    "Programming Language :: Lisp",
+    "Programming Language :: Python",
     "Topic :: Software Development :: Libraries",
   ]
 )
