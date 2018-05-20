@@ -1,11 +1,11 @@
 Abnum 3
 =======
 
-Alphabetic numerals package (Python 3) including various letter value
-substituting systems from ancient times to modern artificial ones.
+Alphabetic numerals package for Python 3. Module includes various letter value
+substituting systems from the ancient times to the modern artificial ones.
 
-Abnum substitution system is better known as gematria in hebrew and isopsephy in
-greek, abjad in arabic alphabet and katapayadi in sanskrit.
+Abnum substitution system is better known as _gematria_ in hebrew and
+_isopsephy_ in greek, _abjad_ in arabic alphabet and _katapayadi_ in sanskrit.
 
 Currently supported languages are:
 
@@ -26,7 +26,7 @@ Currently supported languages are:
 
 ## Usage
 
-Greek isopsephy:
+Get the value of the greek phrase by adding letter values and returning the sum:
 
 ```python
     from abnum import Abnum, greek
@@ -35,13 +35,13 @@ Greek isopsephy:
     print(g.value('ο Λογος')) # 443
 ```
 
-Use can use multiplication instead of addition:
+Use multiplication instead of addition:
 
 ```python
     from abnum import Abnum, greek
     from operator import mul
     g = Abnum(greek)
-    # use arithmetic function as a second argument and the start value as the third
+    # use an arithmetic function as the second argument and a start value as the third
     print(g.value('ο Λογος', mul, 1)) # 6174000000
 ```
 
@@ -50,7 +50,12 @@ Phoenician script:
 ```python
     from abnum import Abnum, phoenician
     p = Abnum(phoenician)
-    print(list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))) # [71, 852, 75, 1370, 90, 184, 52]
+    a = list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))
+    print(a, sum(a))
+```
+
+```text
+    [71, 852, 75, 1370, 90, 184, 52], 2694
 ```
 
 ## Jupyter notebooks
