@@ -5,13 +5,15 @@
 import re
 import romanize3
 import pandas as pd
+from operator import add
+from functools import reduce
 from . import letter_value
 from IPython.display import HTML
 from remarkuple import helper as h, table
 from .math import digital_root, digital_sum
 from .search import find_cumulative_indices
 
-error_msg = "String '%s' contains unsupported characters for letter value calculation"
+error_msg = "String '%s' contains unsupported characters for the letter value calculation."
 
 class AbnumException(Exception):
     pass
@@ -19,8 +21,8 @@ class AbnumException(Exception):
 class Abnum(object):
     """
     from abnum import Abnum, greek
-    abn = Abnum(greek)
-    print abn.value('ο Λογος') -> 443
+    g = Abnum(greek)
+    print(g.value('ο Λογος')) # 443
     """
     def __init__(self, code, data = None):
         self.values = {}
@@ -53,16 +55,16 @@ class Abnum(object):
         self.regex_values = re.compile('|'.join(self.values.keys()))
         self.regex_has_numbers = re.compile('\d')
 
-    def value(self, string):
+    def value(self, string, func = add, init = 0):
         """
         String is a greek letter, word or sentence OR roman letter representation (transliteration)
         of the greek letter, word or sentence that will be converted to the numerical value letter by letter
         Main function will convert input to unicode format for easier frontend, but on module logic
         more straightforward function unicode_letter_value is used.
         """
-        return self.unicode_value(str(string))
+        return self.unicode_value(str(string), func, init)
 
-    def unicode_value(self, string):
+    def unicode_value(self, string, func = add, init = 0):
         """
         String argument must be in unicode format.
         """
@@ -75,7 +77,7 @@ class Abnum(object):
                                             string)
             # don't accept strings, that contains letters which haven't been be converted to numbers
             try:
-                result = sum([int(i) for i in num_str.split()])
+                result = reduce(func, [int(i) for i in num_str.split()], init)
             except Exception as e:
                 raise AbnumException(error_msg % string)
         return result
