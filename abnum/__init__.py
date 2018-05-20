@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # file: __init__.py
 
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 from .main import Abnum, AbnumException
 """
