@@ -2,10 +2,12 @@
 # -*- coding: utf-8 -*-
 # file: math.py
 
+from functools import reduce
+
 def digital_root(num, modulo = 9):
     """ similar to modulo, but 0 and 9 are taken as 9 """
-    val = num % modulo
-    return val if val > 0 else modulo
+    # return the remainder if it is more than zero, else return the modulo
+    return num % modulo or modulo
 
 def digital_sum(num):
     return sum(prepare_digital_operation(num))
