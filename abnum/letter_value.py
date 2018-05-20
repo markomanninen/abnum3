@@ -12,7 +12,7 @@ english    = 'eng'
 sanskrit   = 'san'
 arabic     = 'ara'
 aramaic    = 'arm'
-syriaic    = 'syc' #classical
+syriaic    = 'syc' # classical syriaic
 phoenician = 'phn'
 finnish    = 'fin'
 brahmi     = 'brh'
@@ -39,7 +39,9 @@ data[hebrew] = (
 # letters from י to צ (10 to 90)
 	[10, 'yod'], [20, 'kaph'], [30, 'lamed'], [40, 'mem'], [50, 'num'], [60, 'samekh'], [70, 'ayin'], [80, 'pe'], [90, 'tsade'],
 # letters from ק to ץ (100 to 900)
-	[100, 'qoph'], [200, 'resh'], [300, 'shin'], [400, 'tau'], [500, 'final_kaph'], [600, 'final_mem'], [700, 'final_nun'], [800, 'final_pe'], [900, 'final_tsade']
+	[100, 'qoph'], [200, 'resh'], [300, 'shin'], [400, 'tau'],
+# Finals
+	[500, 'final_kaph'], [600, 'final_mem'], [700, 'final_nun'], [800, 'final_pe'], [900, 'final_tsade']
 )
 
 data[english] = (
@@ -58,7 +60,7 @@ data[finnish] = (
 
 data[coptic] = (
 # letters from ⲁ to ⲑ (1 - 9)
-	[1, 'alpha'], [2, 'beta'], [3, 'gamma'], [4, 'delta'], [5, 'ei'], [6, 'so'], [7, 'zeta'], [8, 'eta'], [9, 'theta'],
+	[1, 'alpha'], [2, 'beth'], [3, 'gamma'], [4, 'delta'], [5, 'ei'], [6, 'so'], [7, 'zeta'], [8, 'eta'], [9, 'theta'],
 # letters from ⲓ to ϥ (10 - 19)
 	[10, 'yota'], [20, 'kappa'], [30, 'lambda'], [40, 'me'], [50, 'ne'], [60, 'eksi'], [70, 'o'], [80, 'pi'], [90, 'fay'],
 # letters from ⲣ to ⳁ (100 - 900)
@@ -99,7 +101,7 @@ data[phoenician] = (
 # letters from 𐤀‬ to 𐤈‬
 	[1, 'alep'], [2, 'bet'], [3, 'giml'], [4, 'dalet'], [5, 'he'], [6, 'waw'], [7, 'zayin'], [8, 'het'], [9, 'tet'],
 # letters from 𐤉‬ to 𐤑‬
-	[10, 'yod'], [20, 'kap'], [30, 'lamed'], [40, 'mem'], [50, 'num'], [60, 'semek'], [70, 'ayin'], [80, 'pe'], [90, 'sade'],
+	[10, 'yod'], [20, 'kap'], [30, 'lamed'], [40, 'mem'], [50, 'nun'], [60, 'semek'], [70, 'ayin'], [80, 'pe'], [90, 'sade'],
 # letters from 𐤒‬ to 𐤕‬
 	[100, 'qop'], [200, 'res'], [300, 'sin'], [400, 'taw']
 # Finals?
