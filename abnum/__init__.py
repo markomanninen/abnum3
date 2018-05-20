@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # file: __init__.py
 
-__version__ = "0.1.6"
+__version__ = "0.1.7"
 
 from .main import Abnum, AbnumException
 """
@@ -15,8 +15,8 @@ from .letter_value import *
 """
 exporting:
 - data
-- greek, hebrew, coptic
-- english, sanskrit, arabic
+- greek, hebrew, coptic, aramaic, finnish, phoenician
+- english, sanskrit, arabic, syriaic, brahmi
 """
 
 from .math import *

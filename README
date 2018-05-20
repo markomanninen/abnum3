@@ -5,7 +5,7 @@ Alphabetic numerals package (Python 3) including various letter value substituti
 
 Please see Jupyter notebooks for study and examples:
 
-[Usage of the library](Abnum%203%20introduction.ipynb). Includes the verification of the isopsephical value of the Bergama stele, 100-200 AD.
+[Usage of the library](Abnum%203%20introduction.ipynb). Includes the verification of the isopsephical value of the Bergama stele, 100 - 200 AD.
 
 [Isopsephical riddle of the Sibylline verses](Isopsephical%20riddle%20of%20the%20Pseudo%20Sibylline%20hexameter.ipynb), Book 1, lines 137 - 146.
 
