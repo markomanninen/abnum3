@@ -33,7 +33,7 @@ Currently supported languages are:
     print(g.value('ο Λογος')) # 443
 
     p = Abnum(phoenician)
-    print(list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))) #
+    print(list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))) # [71, 852, 75, 1370, 90, 184, 52]
 ```
 
 ## Jupyter notebooks

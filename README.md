@@ -26,14 +26,31 @@ Currently supported languages are:
 
 ## Usage
 
+Greek isopsephy:
+
 ```python
-    from abnum import Abnum, greek, phoenician
+    from abnum import Abnum, greek
 
     g = Abnum(greek)
     print(g.value('ο Λογος')) # 443
+```
 
+Use can use multiplication instead of addition:
+
+```python
+    from abnum import Abnum, greek
+    from operator import mul
+    g = Abnum(greek)
+    # use arithmetic function as a second argument and the start value as the third
+    print(g.value('ο Λογος', mul, 1)) # 6174000000
+```
+
+Phoenician script:
+
+```python
+    from abnum import Abnum, phoenician
     p = Abnum(phoenician)
-    print(list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))) #
+    print(list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))) # [71, 852, 75, 1370, 90, 184, 52]
 ```
 
 ## Jupyter notebooks

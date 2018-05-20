@@ -4,7 +4,8 @@ except ImportError:
     from distutils.core import setup
 import os
 
-#python setup.py sdist upload
+# python setup.py sdist upload
+# pip install --no-cache-dir --upgrade abnum
 
 version = 'v0.1.9'
 
