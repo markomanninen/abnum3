@@ -34,6 +34,7 @@ Currently supported languages are:
 
     p = Abnum(phoenician)
     print(list(map(g.value, "𐤀𐤍𐤊 𐤕𐤁𐤍𐤕 𐤊𐤄𐤍 𐤏𐤔𐤕𐤓𐤕 𐤌𐤋𐤊 𐤑𐤃𐤍𐤌 𐤁𐤍".split(" ")))) #
+```
 
 ## Jupyter notebooks
 
