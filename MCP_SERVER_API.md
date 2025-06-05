@@ -2,7 +2,7 @@
 
 ## Overview
 
-The MCP (Master Control Program) Server provides an HTTP interface to interact with various tools, primarily focused on the `abnum` library for Gematria calculations and text analysis. It allows users to calculate numerical values of texts based on different ancient and modern language codes and find text segments that match a specific numerical value.
+The MCP (Model Context Protocol) Server provides an HTTP interface to interact with various tools, primarily focused on the `abnum` library for Gematria calculations and text analysis. It allows users to calculate numerical values of texts based on different ancient and modern language codes and find text segments that match a specific numerical value.
 
 ## Base URL
 
